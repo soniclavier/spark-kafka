@@ -1,8 +1,7 @@
-package com.vishnuviswanath
+package com.vishnuviswanath.spark
 
 import com.vishnuviswanath.util.ParameterParser
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.types._
 
 /**
   * Created by vviswanath on 3/6/18.
