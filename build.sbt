@@ -17,3 +17,8 @@ libraryDependencies += "org.apache.kafka" % "kafka-clients" % kafkaVersion
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.2" % Test
 libraryDependencies += "com.github.scopt" %% "scopt" % "3.7.0"
 
+
+docker exec -it spark-kafka spark-submit \
+  --master spark://172.17.0.2:7077 \
+  --class com.vishnuviswanath.spark.streaming.KafkaSourceStreaming \
+  /spark_23-assembly-1.0.jar --master spark://172.17.0.2:7077 --kafka-broker 172.17.0.2:9092

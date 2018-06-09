@@ -15,7 +15,7 @@ object SocketStreamingApp {
 
     val spark = SparkSession
       .builder
-      .master(parameters.getOrElse("master", "local[*]"))
+      .master("local[*]")
       .getOrCreate()
 
     val input = spark
